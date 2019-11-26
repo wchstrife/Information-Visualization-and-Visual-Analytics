@@ -1,7 +1,10 @@
 import numpy as np
-
-
+from matplotlib import pyplot as plt
+    
 def PCA(X=np.array([]), no_dims=50):
+    ''' 
+        使用PCA预降维到no_dims维
+    '''
     (n, d) = X.shape
     X = X - np.tile(np.mean(X, 0), (n, 1))
     (l, M) = np.linalg.eig(np.dot(X.T, X))
