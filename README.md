@@ -123,19 +123,25 @@ $$
 算法伪代码如下：
 
 ```
-input n*m data
+input data set X = {x1, x2, ..., xn}
 input perplexity Perp
+input iterations T, learning rate n, momentum a(t)
 
-给定困惑度：Perp
-初始化参数：迭代次数，学习率，动量
+begin
+    compute p_{j|i} with perplexity Perp
+    compute P_{ij}
+    initial y(0) = {y1, y2, ..., yn}
 
-计算给定Perp下的高维空间的条件概率P_ij
-用高斯分布随机初始化Y
-
-迭代
-    计算低维空间q_ij
-    计算梯度
-    更新Y^t
+    for t = 1 to T 
+        compute q_{ij}
+        compute gradient
+        update y(t)
+    end
+end
 ```
 
 ## 四、实验结果
+
+## 五、参考文献
+
+http://www.datakit.cn/blog/2017/02/05/t_sne_full.html#21-symmetric-sne
