@@ -2,6 +2,10 @@
 
 ## 一、运行
 
+```
+python tsne.py
+```
+
 ## 二、算法原理
 
 ### 2.1 SNE原理
@@ -142,6 +146,8 @@ end
 
 ## 四、实验结果
 
+![](./result.png)
+
 ## 五、参考文献
 
-http://www.datakit.cn/blog/2017/02/05/t_sne_full.html#21-symmetric-sne
+1. Van der Maaten L, Hinton G. Visualizing data using t-SNE[J]. Journal of Machine Learning Research, 2008, 9(2579-2605): 85.
