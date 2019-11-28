@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8' />
+  <title>Squarified Treemap</title>
+  <style type="text/css">
+    body {
+      font-family: 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', 'Hiragino Sans GB', 'Source Han Sans CN', 'Source Han Sans SC', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', 'SimHei', 'WenQuanYi Zen Hei Sharp', 'sans-serif';
+    }
+    svg .rect:hover {
+      fill: #333;
+    }
+    svg .text, svg .text:hover {
+      font-family: 'Courier New', Courier, monospace;
+      pointer-events: none;
+    }
+    #container {
+      display: flex;
+    }
+    #board-container {
+      flex: 1;
+    }
+    #info-container {
+      flex: 0 0 25%;
+      padding-right: 20px;
+    }
+    li.todo {
+      font-style: italic;
+    }
+    span.author {
+      font-size: 18px;
+      font-weight: normal;
+    }
+    a, a:visited {
+      text-decoration: underline;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <h1>Squarified Treemap </h1>
+    <div id="container">
+      <div id="info-container">
+        <div id="description">
+          <br>
+          <h4>功能</h4>
+          <ul>
+            <li>Squarified Treemap</li>
+            <li>Treemap 可视化</li>
+            <li>随机生成数据</li>
+            <li>手动指定生成的深度和宽度</li>
+            <li>左下角显示节点的层次关系</li>
+            <li>过渡动画</li>
+          </ul>
+        </div>
+        <hr>
+        <div id="input">
+          choose depth and width
+          <br>
+          Depth: <input type="text" id="input_depth" value="5">
+          Width: <input type="text" id="input_width" value="3">
+          <a class="btn" href="javascript:;" onclick="gen()">Generate</a>
+        </div>
+        <hr>
+        <div id="info">
+        </div>
+      </div>
+      <div id="board-container">
+        <svg id="board" xmlns="http://www.w3.org/2000/svg">
+        </svg>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="main.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61135638-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-61135638-2');
+  </script>
+
+</body>
+</html>
